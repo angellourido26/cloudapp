@@ -8,49 +8,159 @@
     <style>
         body{
             font-family: Arial, sans-serif;
-            background-color: #f4f6f9;
+            background-color: #e8f4ff;
+            margin: 0;
             text-align: center;
-            padding-top: 60px;
+        }
+
+        header{
+            background-color: #003366;
+            color: white;
+            padding: 20px;
+        }
+
+        nav{
+            background-color: #0055aa;
+            padding: 10px;
+        }
+
+        nav a{
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+            font-weight: bold;
         }
 
         .contenedor{
-            background: white;
-            width: 60%;
+            width: 80%;
             margin: auto;
-            padding: 30px;
+            padding: 20px;
+        }
+
+        section{
+            background: white;
+            margin-top: 20px;
+            padding: 20px;
             border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
         }
 
-        h1{
-            color: #0077cc;
+        img{
+            width: 300px;
+            border-radius: 10px;
         }
 
-        p{
-            font-size: 18px;
+        table{
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table, th, td{
+            border: 1px solid black;
+        }
+
+        th{
+            background-color: #0055aa;
+            color: white;
+        }
+
+        th, td{
+            padding: 10px;
+        }
+
+        input{
+            padding: 8px;
+            margin: 5px;
+        }
+
+        button{
+            background-color: #0055aa;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+
+        footer{
+            margin-top: 20px;
+            background-color: #003366;
+            color: white;
+            padding: 15px;
         }
     </style>
 </head>
 <body>
 
-    <div class="contenedor">
-        <h1>Aplicación en la Nube ☁️</h1>
+<header>
+    <h1>Cloud App ☁️</h1>
+    <p>Aplicación Web Desplegada en la Nube</p>
+</header>
 
-        <p><strong>Estudiantes:</strong> Angello Lourido y Alejandro Guerrero</p>
+<nav>
+    <a href="#tabla">Tabla</a>
+    <a href="#imagen">Imagen</a>
+</nav>
 
-        <p>La aplicación está alojada en la nube correctamente.</p>
+<div class="contenedor">
 
-        <p>Servidor funcionando 24/7 desde internet.</p>
+    <section>
+        <h2>Bienvenido</h2>
+        <p>
+            Esta aplicación demuestra los nuevos cambios que
+            se han realizado y están alojados en la 
+            nube correctamente.
+        </p>
+
+        <p>
+            <strong>Estudiante:</strong> Angello Lourido y Alejandro Guerrero
+        </p>
 
         <p id="fecha"></p>
-    </div>
 
-    <script>
-        const fecha = new Date();
+    </section>
 
-        document.getElementById("fecha").innerHTML =
-            "Fecha y hora: " + fecha;
-    </script>
+        <section id="tabla">
+        <h2>Tabla de Servicios Cloud</h2>
+
+        <table>
+            <tr>
+                <th>Servicio</th>
+                <th>Descripción</th>
+            </tr>
+
+            <tr>
+                <td>Almacenamiento</td>
+                <td>Guardar archivos en la nube.</td>
+            </tr>
+
+            <tr>
+                <td>Hosting</td>
+                <td>Publicación de aplicaciones web.</td>
+            </tr>
+
+            <tr>
+                <td>Base de Datos</td>
+                <td>Gestión de información en línea.</td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="imagen">
+        <h2>Imagen</h2>
+
+        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800"
+             alt="Cloud Computing">
+    </section>
+</div>
+
+<footer>
+    <p>Aplicación desplegada en Render</p>
+</footer>
+
+<script>
+    document.getElementById("fecha").innerHTML =
+        "Fecha y hora: " + new Date();
+</script>
 
 </body>
 </html>
